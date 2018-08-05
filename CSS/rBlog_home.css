@@ -1,0 +1,516 @@
+/*Navigating CSS for this website follows a pattern similar to 
+that found on the html page:
+    1.Navigation
+    2.Banner
+    3.Row 1 
+    4.Row 2
+
+Use !# followed with the number to locate the sections*/
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.875em;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/*!#1*/
+#navigation {
+    background-color: #ffffff;
+    height: 55px;
+    box-shadow: 0px 7px 27.3px 7.7px rgba(0, 0, 0, 0.25); 
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+#logo {
+    width: 175px;
+    height: 70px;
+    margin: -4px auto 0 5px;
+}
+
+#nav_links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start; 
+    position: absolute;
+    z-index: 1;
+    top: 1.84em;
+    right: 0;
+    background: rgba(243, 243, 243, 0.7);
+    width: 100%;
+    overflow: hidden;
+}
+
+#nav_links li {
+    width: 98.9%;
+    transition: .2s border-right;
+}
+
+#nav_links p {
+    margin: 0;
+}
+
+#nav_links a{
+    text-decoration: none;
+    color: black;
+    padding: 20px 0px 20px 10px;
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+    font-size: 0.75em;
+    flex-grow: 1;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    margin: 7px 12px 0 0;
+}
+
+.rectangle {
+    height: 6px;
+    width: 40px;
+    background: #7fa3e1;
+    margin-top: 6px;
+}
+
+.darkBlue {
+    background-color: #5275b2;
+}
+
+/*!#2*/
+#banner {
+    background-image: url("../Images/Banner.jpg");
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+#banner h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 1.5em;
+}
+
+/*!#3*/
+.divider {
+    width: 100%;
+    height: 30px;
+    background: -webkit-linear-gradient(left, #6a90d2, #6a90d2 33%, #7fa3e1 33%, #7fa3e1 66%, #6a90d2 66%, #6a90d2);
+}
+
+#row_1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+    position: relative;
+    align-items: center;
+}
+
+#recent_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-self: center;
+}
+
+#recent_div h2 {
+    margin: .5em 0;
+    line-height: 0.9em;
+}
+
+#rImg_container {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#r_gallery {
+    max-width: 500px;
+    width: 90%;
+    border: #f3f3f3 solid 10px;
+    box-shadow: 0px 20px 32.8px 7.2px rgba(0, 0, 0, 0.26); 
+}
+
+#recent_div p {
+    font-size: 0.7em;
+    line-height: 1.45em;
+    width: 95%;
+    margin-top: 1.6em;
+}
+
+#rMore_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-around;
+    margin: 1em 0;
+}
+
+.rMore {
+    height: 200px;
+    background: #7fa3e1;
+    margin: 0.2em 0;
+    width: 95%;
+    align-self: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.rMore img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform .75s ease-in-out;
+}
+
+.rMore:hover > img{
+    transform: translateY(100%);
+}
+
+/*!#4*/
+#row_2 .divider {
+    background: -webkit-linear-gradient(left, #7fa3e1, #7fa3e1 33%, #6a90d2 33%, #6a90d2 66%, #7fa3e1 66%, #7fa3e1);
+    height: 10px;
+}
+
+#row_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#selector {
+    width: 100%;
+    height: 400px;
+    background: #6a90d2;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+}
+
+#posts_box {
+    display: inherit;
+    flex-direction: row;
+    flex: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.posts_titles {
+    background: #f3f3f3;
+    width: 33%;
+    text-align: center;
+    padding: 0.5em 0;
+    color: white;
+    font-family: 'Hind';
+}
+
+.posts_titles:nth-child(1) {
+    background: #6a90d2;
+}
+
+.posts_titles:nth-child(2) {
+    width: 34%;
+    background: #6f99e1;
+}
+
+.posts_titles:nth-child(3) {
+    background: #7fa3e1;
+}
+
+#posts_box li {
+    font-weight: 300;
+    font-size: 0.563em;
+}
+
+#cat_image {
+    width: 95%;
+    height: 370px;
+    background: white;
+    background-image: url(../Images/Philippines.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: auto;
+}
+
+#overlay {
+    transition: 0.8s background-color;
+}
+
+.cat_name {
+    font-size: 0.707em; 
+    color: #ffffff;
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Hind';
+    opacity: 0;
+    transition: .6s opacity;
+}
+
+/*Pseudo Elements/Classes*/
+
+/*!#1*/
+#menu:hover {
+    cursor: pointer;
+}
+
+#nav_links li:hover {
+    border-right: #6a90d2 solid 4px;
+}
+
+#nav_links a:active {
+    color: grey;
+}
+
+.rMore:hover {
+    cursor: pointer;
+}
+
+.posts_titles:hover {
+    color: #dddddd;
+    cursor: pointer;
+}
+
+#cat_image:hover {
+    cursor: pointer;
+}
+
+#cat_image:hover > #overlay{
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+#cat_image:hover > .cat_name {
+    opacity: 1;
+}
+
+@media (min-width: 470px) {
+    /*!#1*/
+    #nav_links {
+        width: 50%;
+    } 
+    /*!#2*/
+    #banner {
+        flex-direction: row;
+    }
+
+    #banner h1 {
+        font-size: 2.3em;
+        line-height: 1.33em;
+        margin-top: 0.75em;
+    }
+
+    /*!#3*/
+    #r_gallery {
+        background-size: cover;
+        max-width: 600px;
+        height: 300px;
+    }
+
+    .rMore {
+        height: 150px;
+        width: 95%;
+        align-self: center;
+    }
+
+    /*!#4*/
+    #posts_box li {
+        font-size: 0.75em;
+    }
+
+    .cat_name {
+        font-size: 1.414em; 
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+@media (min-width: 700px) {
+
+    /*!#1*/
+    #nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: initial;
+        background: none;
+        height: auto;
+        width: auto;
+    }
+
+    #nav_links li {
+        height: 45px;
+        width: 70px;
+        margin: 7px 15px;
+        text-align: center;
+        transition: .2s border-bottom;
+    }
+
+    #nav_links a {
+        padding: 0;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    /*!#2*/
+    #banner h1 {
+        font-size: 3.157em;
+        line-height: 1.24em;
+    }
+    
+    /*!#3*/
+    #recent_div {
+        margin: 1em 0;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-around;
+    }
+
+    #recent_div p {
+        width: 42%;
+        margin-left: 1em;
+        margin-top: 4em;
+    }
+
+    #rImg_container {
+        width: 40%;
+        align-self: flex-start;
+        align-items: flex-start;
+    }
+
+    #r_gallery {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        min-width: 300px;
+    }
+
+    #rMore_container {
+        flex-direction: row;
+    }
+    .rMore {
+        height: 200px;
+        width: 30%;
+    }
+
+    #nav_links li:hover {
+        border-right: none;
+        border-bottom:  #6a90d2 solid 4px;
+    }
+
+    /*!#4*/
+    .cat_name {
+        font-size: 1.777em;
+    }
+}
+
+@media (min-width: 990px) {
+    #posts_box {
+        width: 90%;
+    }
+
+    #selector {
+        height: 550px;
+        width: 90%;
+    }
+
+    .rMore {
+        width: 25%;
+    }
+
+    #cat_image {
+        height: 500px;
+    }
+
+    #cat_image:hover > #overlay{
+        height: 500px;
+    }
+
+    #row_2 .divider {
+        margin: 1em 0;
+    }
+}
+@media (min-width: 1600px) {
+    #recent_div {
+        width: 80%;
+    }
+
+    #recent_div p {
+        width: 50%;
+    }
+
+    #rMore_container {
+        width: 80%;
+        align-self: center;
+    }
+
+    .rMore {
+        height: 250px;
+        width: 30%
+    }
+
+    .rMore img {
+        height: 250px;
+    }
+
+    #posts_box {
+        width: 80%;
+    }
+
+    #selector {
+        height: 600px;
+        width: 80%;
+    }
+
+    #cat_image {
+        height: 550px;
+    }
+
+    #cat_image:hover > #overlay{
+        height: 550px;
+    }
+}

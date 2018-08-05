@@ -1,3 +1,4 @@
+//Home
 const $menu_button = $("#menu");
 const $menu = $("#nav_links");
 const menu_bars = document.querySelectorAll("div.rectangle");
@@ -43,22 +44,6 @@ $($menu_button).on('click', x => {
     }
 });
 
-/*Dims Image shows Topic*/
-$($cat_name).hide(500);
-
-$($cat_image).on('mouseover', x => {
-    $($cat_name).fadeIn(100);
-});
-
-$($cat_image).on('mouseout', x => {
-    $($cat_name).stop(); 
-    $cat_image.on('transitionend webkitTransitionEnd oTransitionEnd', function () {
-        $($cat_image).on('mouseout', x => {
-            $($cat_name).fadeOut(100);
-        });
-    });
-});
-
 /*Changes Background Image and Color*/
 const change = (value1, value2, value3) => {
     $($selector).css('background-color', value1);
@@ -82,3 +67,66 @@ $($row_2).on('click', x => {
             }
         }
 });
+
+//Posts
+const $color_indicator = $("#color-indicator");
+const $content_browser = $("#content_browser");
+const $color_divider = $("#color-divider");
+const $phillipines = $(".philippines");
+const $america = $(".america");
+const $career = $(".career");
+const $content_nav = $("#content_nav");
+
+$("#content_nav:first-child").hide();
+
+/*Content Selector*/
+const change_color = (color) => {
+    $($color_indicator).css('background', color);
+    $($color_divider).css('background', color);
+}
+
+const change_display = (america, career, philippines) => {
+    $($america).each(function(i) {
+        let parent = this.parentNode;
+        parent.style.display = america;
+    });
+    $($career).each(function(i) {
+        let parent = this.parentNode;
+        parent.style.display = career;
+    });
+    $($phillipines).each(function(i) {
+        let parent = this.parentNode;
+        parent.style.display = philippines;
+    });
+    $("#content_nav:first-child").show();
+}
+
+$($content_browser).on('click', x => {
+    let Childs = x.target;
+    if(Childs.tagName == 'LI') {
+        switch(Childs.textContent) {
+            case 'Philippines':
+                change_color('#6a90d2');
+                change_display('none', 'none', 'block');
+                break;
+            case 'Career':
+                change_color('#6f99e1');
+                change_display('none', 'block', 'none');
+                break;
+            case 'America':
+                change_color('#7fa3e1');
+                change_display('block', 'none', 'none');
+                break;
+            }
+        }
+});
+
+$($content_nav).on('click', x => {
+    let target = x.target;
+    if(target.tagName == 'H3') {
+        change_color('linear-gradient(to right, #7fa3e1,#6a90d2,#6f99e1)');
+        change_display('block', 'block', 'block');
+        $("#content_nav:first-child").hide();
+    }
+});
+
