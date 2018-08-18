@@ -4,7 +4,7 @@ that found on the html page:
     2.Banner
     3.Row 1 
     4.Row 2
-
+    5.Elements not included
 Use !# followed with the number to locate the sections*/
 
 h1 {
@@ -21,6 +21,7 @@ body {
     font-size: 1.875em;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 /*!#1*/
@@ -103,6 +104,22 @@ footer {
     background: #f3f3f3;
     margin-top: 2em;
 }
+
+/*!#5*/
+#totop {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    bottom: 25px;
+    right: 20px;
+    background:rgba(237, 237, 237, 0.8);
+    height: 100px;
+    width: 100px;
+    border: none;
+    outline: none;
+    border-top: 3px solid#5275b2;
+}
+
 /*Pseudo Elements/Classes*/
 /*!#1*/
 #menu:hover {
@@ -115,6 +132,11 @@ footer {
 
 #nav_links a:active {
     color: grey;
+}
+
+/*!#5*/
+#totop:hover {
+    cursor: pointer;
 }
 
 @media (min-width: 470px) {
@@ -151,5 +173,10 @@ footer {
 
     #menu {
         display: none;
+    }
+
+    #nav_links li:hover {
+        border-right: none;
+        border-bottom:  #6a90d2 solid 4px;
     }
 }

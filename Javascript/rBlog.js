@@ -130,3 +130,15 @@ $($content_nav).on('click', x => {
     }
 });
 
+/*Scroll to top button*/
+$(window).scroll(function() {
+    if($(this).scrollTop() > 50 ) {
+      $('#totop:hidden').stop(true, true).fadeIn(); 
+    } else {
+        $('#totop').stop(true, true).fadeOut();
+    }
+})
+$("#totop").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
