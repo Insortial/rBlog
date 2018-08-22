@@ -1,0 +1,117 @@
+
+#about_div {
+    width: 100%;
+    box-shadow: 0px 0px 36.8px 3.2px rgba(0, 0, 0, 0.17); 
+    align-self: center;
+    margin: 2em 0 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    width: 100%;
+    background: #5275b2;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    color: #efefef;
+    font-family: 'Hind', sans-serif;
+    font-weight: 300;
+}
+
+#contact div {
+    background: white;
+    border-radius: 3.5em;
+    border: #6a90d2 solid 8px;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    margin-top: 0.5em;
+    box-shadow: 0px 0px 36.8px 3.2px rgba(0, 0, 0, 0.17); 
+}
+
+#contact h2 {
+    text-align: center;
+    margin: .4em 0 .5em;
+    line-height: 1.3em;
+}
+
+#contact span {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#contact ul{
+    list-style-type: none;
+    margin: 0 1em;
+    padding: 0;
+    font-size: .75em;
+    text-align: center;
+}
+
+#info {
+    width: 100%;
+}
+
+#info h2 {
+    margin: .5em 0.25em;
+}
+
+#info p {
+    font-size: 0.7em;
+    line-height: 1.5em;
+    margin: 0 0.5em 1.5em;
+}
+
+@media (min-width: 700px) {
+    #about_div {
+        flex-direction: row;
+        width: 95%;
+    }
+
+    #contact {
+        width: 40%;
+    }
+    
+    #contact div {
+        margin-top: 1.5em;
+    }
+
+    #info {
+        width: 60%;
+        padding: 0 1em;
+    }
+
+    #info h2 {
+        margin-top: .4em;
+    }
+
+    #info p{
+        margin-bottom: 2em;
+    }
+}
+
+@media (min-width: 1100px) {
+    #about_div {
+        flex-direction: row;
+        width: 77%;
+    }
+
+    #contact {
+        width: 30%;
+    }
+    
+    #info {
+        padding: 0 2em;
+    }
+
+    #info h2 {
+        margin-bottom: 0;
+    }
+
+    #info p {
+        margin-bottom: 7.8em;
+        line-height: 1.6em;
+    }
+
+}
